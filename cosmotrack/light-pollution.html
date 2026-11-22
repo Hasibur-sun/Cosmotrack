@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light Pollution Reports | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="pollution" class="">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="app-shell">
+
+<?php include 'includes/sidebar.php'; ?>
+
+<main class="main-panel">
+  <button class="mobile-menu" type="button">☰ Menu</button>
+  <section class="page-head"><div><p class="eyebrow">CRUD Module</p><h1>Light Pollution Reports</h1><p class="muted">This frontend saves demo data in browser localStorage. Later connect this form to PHP/MySQL.</p></div></section><section class="glass panel"><h2>Add New</h2><form class="crud-form form-grid" data-store="pollution" method="POST" action="#"><!-- Later: action="actions/add_pollution.php" --><label>Location ID<input type="number" name="location_id" placeholder="Location ID"></label><label>Report Date<input type="date" name="report_date" placeholder="Report Date"></label><label>Bortle Scale<select name="bortle_scale"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></label><label>Sky Brightness<input type="text" name="sky_brightness" placeholder="Sky Brightness"></label><label>Visibility Condition<input type="text" name="visibility_condition" placeholder="Visibility Condition"></label><label>Notes<textarea name="notes" placeholder="Write notes..."></textarea></label><div class="form-actions"><button class="btn primary" type="submit">Save Report</button><button class="btn ghost" type="reset">Reset</button></div></form></section>
+<section class="glass panel"><div class="panel-head"><h2>Saved Records</h2><button class="btn tiny ghost" data-clear="pollution">Clear Demo Data</button></div><div class="table-wrap"><table><thead><tr><th>Id</th><th>Location Id</th><th>Report Date</th><th>Bortle Scale</th><th>Sky Brightness</th><th>Visibility Condition</th><th>Notes</th><th>Action</th></tr></thead><tbody data-table="pollution" data-cols="location_id,report_date,bortle_scale,sky_brightness,visibility_condition,notes"></tbody></table></div></section>
+</main>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

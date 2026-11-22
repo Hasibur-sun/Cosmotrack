@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="admin" class="">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="app-shell">
+
+<?php include 'includes/sidebar.php'; ?>
+
+<main class="main-panel">
+  <button class="mobile-menu" type="button">☰ Menu</button>
+  <section class="page-head"><div><p class="eyebrow">Admin Control Center</p><h1>Admin Dashboard</h1><p class="muted">Frontend demo for managing users and all system records.</p></div></section><div class="stats-grid">
+  <div class="stat glass"><span>Total Observations</span><strong data-count="observations">0</strong></div>
+  <div class="stat glass"><span>Meteor Reports</span><strong data-count="meteors">0</strong></div>
+  <div class="stat glass"><span>Satellite Passes</span><strong data-count="satellites">0</strong></div>
+  <div class="stat glass"><span>Saved Locations</span><strong data-count="locations">0</strong></div>
+  <div class="stat glass"><span>Telescopes</span><strong data-count="telescopes">0</strong></div>
+  <div class="stat glass"><span>Light Reports</span><strong data-count="pollution">0</strong></div>
+</div><section class="glass panel"><h2>Demo Users</h2><div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Action</th></tr></thead><tbody data-users></tbody></table></div></section><section class="glass panel"><h2>Recent System Records</h2><div class="table-wrap"><table><thead><tr><th>Module</th><th>Total Records</th><th>Status</th></tr></thead><tbody data-admin-summary></tbody></table></div></section>
+</main>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

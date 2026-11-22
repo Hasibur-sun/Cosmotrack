@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="reports" class="">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="app-shell">
+<?php include 'includes/sidebar.php'; ?>
+
+<main class="main-panel">
+  <button class="mobile-menu" type="button">☰ Menu</button>
+  <section class="page-head"><div><p class="eyebrow">Analytics</p><h1>Reports & Visual Summary</h1><p class="muted">Demo analytics based on localStorage records.</p></div></section><div class="stats-grid">
+  <div class="stat glass"><span>Total Observations</span><strong data-count="observations">0</strong></div>
+  <div class="stat glass"><span>Meteor Reports</span><strong data-count="meteors">0</strong></div>
+  <div class="stat glass"><span>Satellite Passes</span><strong data-count="satellites">0</strong></div>
+  <div class="stat glass"><span>Saved Locations</span><strong data-count="locations">0</strong></div>
+  <div class="stat glass"><span>Telescopes</span><strong data-count="telescopes">0</strong></div>
+  <div class="stat glass"><span>Light Reports</span><strong data-count="pollution">0</strong></div>
+</div><div class="dashboard-grid"><section class="glass panel"><h2>Object Type Distribution</h2><div class="donut"></div></section><section class="glass panel"><h2>Observation Activity</h2><div class="bar-chart tall"><span style="height:30%"></span><span style="height:45%"></span><span style="height:80%"></span><span style="height:55%"></span><span style="height:72%"></span></div></section><section class="glass panel wide"><h2>Report Actions</h2><button class="btn primary">Generate Report</button><button class="btn ghost">Download Summary</button></section></div>
+</main>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

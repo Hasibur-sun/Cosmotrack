@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observation Records | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body data-page="observations">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+
+  <div class="app-shell">
+   
+      <a class="brand mini" href="dashboard.php">
+        <span class="planet-dot"></span>
+        <span>CosmoTrack</span>
+      </a>
+
+      <nav>
+        <a href="dashboard.php" data-page="dashboard">Dashboard</a>
+        <a href="observations.html" data-page="observations">Add Observation</a>
+        <a href="view_observations.php" data-page="observations">View Observations</a>
+        <a href="telescopes.html" data-page="telescopes">Telescopes</a>
+        <a href="view_telescopes.php" data-page="telescopes">View Telescopes</a>
+        <a href="locations.html" data-page="locations">Locations</a>
+        <a href="view_locations.php" data-page="locations">View Locations</a>
+        <a href="meteor-reports.html" data-page="meteor">Meteor Reports</a>
+        <a href="satellite-passes.html" data-page="satellite">Satellite Passes</a>
+        <a href="light-pollution.html" data-page="pollution">Light Pollution</a>
+        <a href="search.html" data-page="search">Search</a>
+        <a href="reports.html" data-page="reports">Reports</a>
+        <a href="profile.html" data-page="profile">Profile</a>
+        <a href="admin-dashboard.php" data-page="admin">Admin</a>
+      </nav>
+
+      <a class="logout" href="login.html">Logout</a>
+    </aside>
+
+    <main class="main-panel">
+      <button class="mobile-menu" type="button">☰ Menu</button>
+
+      <section class="page-head">
+        <div>
+          <p class="eyebrow">Observation Module</p>
+          <h1>Observation Records</h1>
+          <p class="muted">
+            Add astronomy observation records to the CosmoTrack MySQL database.
+          </p>
+        </div>
+      </section>
+
+      <section class="glass panel">
+        <h2>Add New Observation</h2>
+
+        <p class="muted">
+          Before adding an observation, check your Location ID and Telescope ID from the view pages.
+        </p>
+
+        <div class="actions-row">
+          <a class="btn tiny ghost" href="view_locations.php">View Location IDs</a>
+          <a class="btn tiny ghost" href="view_telescopes.php">View Telescope IDs</a>
+        </div>
+
+        <form class="form-grid" method="POST" action="actions/add_observation.php">
+          <label>
+            Object Name
+            <input 
+              type="text" 
+              name="object_name" 
+              placeholder="Mars" 
+              required
+            />
+          </label>
+
+          <label>
+            Object Type
+            <select name="object_type" required>
+              <option value="">Select Object Type</option>
+              <option value="Planet">Planet</option>
+              <option value="Star">Star</option>
+              <option value="Galaxy">Galaxy</option>
+              <option value="Nebula">Nebula</option>
+              <option value="Moon">Moon</option>
+              <option value="Comet">Comet</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <label>
+            Observation Date
+            <input 
+              type="date" 
+              name="observation_date" 
+              required
+            />
+          </label>
+
+          <label>
+            Observation Time
+            <input 
+              type="time" 
+              name="observation_time" 
+            />
+          </label>
+
+          <label>
+            Location ID
+            <input 
+              type="number" 
+              name="location_id" 
+              placeholder="Example: 1" 
+              required
+            />
+          </label>
+
+          <label>
+            Telescope ID
+            <input 
+              type="number" 
+              name="telescope_id" 
+              placeholder="Example: 1" 
+              required
+            />
+          </label>
+
+          <label>
+            Sky Condition
+            <select name="sky_condition" required>
+              <option value="">Select Sky Condition</option>
+              <option value="Clear">Clear</option>
+              <option value="Partly Cloudy">Partly Cloudy</option>
+              <option value="Cloudy">Cloudy</option>
+              <option value="Hazy">Hazy</option>
+            </select>
+          </label>
+
+          <label>
+            Notes
+            <textarea 
+              name="notes" 
+              placeholder="Write observation notes..."
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Save Observation</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="glass panel">
+        <div class="panel-head">
+          <h2>Saved Observation Records</h2>
+          <a class="btn primary" href="view_observations.php">View Database Records</a>
+        </div>
+
+        <p class="muted">
+          After saving an observation, open the database records page to view all submitted observations.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

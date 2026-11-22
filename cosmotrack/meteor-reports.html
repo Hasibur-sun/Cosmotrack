@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteor Reports | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="meteor" class="">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="app-shell">
+
+<?php include 'includes/sidebar.php'; ?>
+
+<main class="main-panel">
+  <button class="mobile-menu" type="button">☰ Menu</button>
+  <section class="page-head"><div><p class="eyebrow">CRUD Module</p><h1>Meteor Reports</h1><p class="muted">This frontend saves demo data in browser localStorage. Later connect this form to PHP/MySQL.</p></div></section><section class="glass panel"><h2>Add New</h2><form class="crud-form form-grid" data-store="meteors" method="POST" action="#"><!-- Later: action="actions/add_meteors.php" --><label>Meteor Shower Name<input type="text" name="meteor_shower_name" placeholder="Meteor Shower Name"></label><label>Sighting Date<input type="date" name="sighting_date" placeholder="Sighting Date"></label><label>Sighting Time<input type="time" name="sighting_time" placeholder="Sighting Time"></label><label>Location ID<input type="number" name="location_id" placeholder="Location ID"></label><label>Brightness Level<input type="text" name="brightness_level" placeholder="Brightness Level"></label><label>Direction<input type="text" name="direction" placeholder="Direction"></label><label>Duration<input type="text" name="duration" placeholder="Duration"></label><label>Notes<textarea name="notes" placeholder="Write notes..."></textarea></label><div class="form-actions"><button class="btn primary" type="submit">Save Meteor Report</button><button class="btn ghost" type="reset">Reset</button></div></form></section>
+<section class="glass panel"><div class="panel-head"><h2>Saved Records</h2><button class="btn tiny ghost" data-clear="meteors">Clear Demo Data</button></div><div class="table-wrap"><table><thead><tr><th>Id</th><th>Meteor Shower Name</th><th>Sighting Date</th><th>Sighting Time</th><th>Location Id</th><th>Brightness Level</th><th>Direction</th><th>Duration</th><th>Notes</th><th>Action</th></tr></thead><tbody data-table="meteors" data-cols="meteor_shower_name,sighting_date,sighting_time,location_id,brightness_level,direction,duration,notes"></tbody></table></div></section>
+</main>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

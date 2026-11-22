@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body data-page="register">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+
+  <main class="auth-wrap">
+    <a class="brand auth-brand" href="index.html">
+      <span class="planet-dot"></span>
+      <span>CosmoTrack</span>
+    </a>
+
+    <section class="auth-card glass">
+      <p class="eyebrow">Join the observatory</p>
+      <h1>Create Account</h1>
+
+      <form method="POST" action="actions/register_user.php">
+        <label>
+          Full Name
+          <input 
+            type="text" 
+            name="name" 
+            required 
+            placeholder="Hasibur Rahman Sun"
+          />
+        </label>
+
+        <label>
+          Email
+          <input 
+            type="email" 
+            name="email" 
+            required 
+            placeholder="you@example.com"
+          />
+        </label>
+
+        <label>
+          Phone
+          <input 
+            type="text" 
+            name="phone" 
+            placeholder="01XXXXXXXXX"
+          />
+        </label>
+
+        <label>
+          Password
+          <input 
+            type="password" 
+            name="password" 
+            required 
+            placeholder="Enter password"
+          />
+        </label>
+
+        <label>
+          Role
+          <select name="role" required>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </label>
+
+        <button class="btn primary full" type="submit">
+          Register
+        </button>
+      </form>
+
+      <p class="muted">
+        Already have an account?
+        <p class="muted">Already have an account? <a href="login.php">Login</a></p>
+      </p>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

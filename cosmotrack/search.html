@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Records | CosmoTrack</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="search" class="">
+  <div class="stars"></div>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+  <div class="app-shell">
+
+<?php include 'includes/sidebar.php'; ?>
+
+<main class="main-panel">
+  <button class="mobile-menu" type="button">☰ Menu</button>
+  <section class="page-head"><div><p class="eyebrow">Archive Search</p><h1>Search CosmoTrack Records</h1><p class="muted">Search demo local data now. Later this can use PHP SELECT queries.</p></div></section><section class="glass panel"><form class="form-grid search-form"><label>Keyword<input name="q" placeholder="Search object, place, telescope..."></label><label>Category<select name="category"><option value="all">All</option><option value="observations">Observations</option><option value="meteors">Meteor Reports</option><option value="satellites">Satellite Passes</option><option value="locations">Locations</option><option value="telescopes">Telescopes</option><option value="pollution">Light Pollution</option></select></label><button class="btn primary" type="submit">Search</button></form></section><section class="glass panel"><h2>Results</h2><div class="table-wrap"><table><thead><tr><th>Category</th><th>ID</th><th>Main Info</th><th>Details</th></tr></thead><tbody data-search-results></tbody></table></div></section>
+</main>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
